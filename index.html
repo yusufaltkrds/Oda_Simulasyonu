@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>3D Oda Simülasyonu</title>
+		<style>
+			body { margin: 0; overflow: hidden; }
+		  
+			#container {
+			  position: absolute;
+			  top: 0;
+			  left: 0;
+			  width: 100%;
+			  height: 100%;
+			  z-index: 0; /* Sahne geride olacak */
+			}
+		  
+			#combo-container {
+			  position: absolute;
+			  top: 10px;
+			  left: 10px;
+			  z-index: 10; /* ComboBox önde olacak */
+			  background-color: rgba(255, 255, 255, 0.8);
+			  padding: 10px;
+			  border-radius: 5px;
+			}
+		  </style>
+		  
+		
+	</head>
+	<body>
+		<div id="container"></div>
+		<div id="combo-container">
+			<label for="mobilya-combo">Mobilya Türleri:</label>
+			<select id="mobilya-combo">
+			  <option value="">Seçim yapın</option>
+			</select>
+		  </div>
+		  <div id="slider-container" >
+			<p>Kaydırma</p>
+			<label for="slider-x">X Ekseni:</label>
+			<input type="range" id="slider-x" min="-100" max="100" step="0.05" value="0">
+			<p></p>
+			<label for="slider-y">Y Ekseni:</label>
+			<input type="range" id="slider-y" min="-100" max="100" step="0.05" value="0">
+			<p></p>
+			<label for="slider-z">Z Ekseni:</label>
+			<input type="range" id="slider-z" min="-100" max="100" step="0.05" value="0">
+			<p></p>
+
+		  </div>
+		  
+		  <div id="rotation-container">
+			<p>Rotasyon Ayarlama</p>
+			<label for="rotate-x">X Ekseni:</label>
+			<input type="range" id="rotate-x" min="0" max="360" step="1" value="0">
+			<p></p>
+			<label for="rotate-y">Y Ekseni:</label>
+			<input type="range" id="rotate-y" min="0" max="360" step="1" value="0">
+			<p></p>
+			<label for="rotate-z">Z Ekseni:</label>
+			<input type="range" id="rotate-z" min="0" max="360" step="1" value="0">
+			<p></p>
+		  </div>
+		  <div id="scale-container">
+			<p>Büyüklük Ayarlama</p>
+			<label for="scale-x">X Ölçeği:</label>
+			<input type="range" id="scale-x" min="0.1" max="10" step="0.1" value="1">
+			<p></p>
+			<label for="scale-y">Y Ölçeği:</label>
+			<input type="range" id="scale-y" min="0.1" max="10" step="0.1" value="1">
+			<p></p>
+			<label for="scale-z">Z Ölçeği:</label>
+			<input type="range" id="scale-z" min="0.1" max="10" step="0.1" value="1">
+			<p></p>
+		  </div>
+		  
+		  <style>
+			#scale-container {
+			  position: absolute;
+			  top: 500px;
+			  left: 10px;
+			  z-index: 10;
+			  background-color: rgba(255, 255, 255, 0.8);
+			  padding: 10px;
+			  border-radius: 5px;
+			  width: 250px;
+			}
+		  </style>
+		  
+		  <style>
+			#rotation-container {
+			  position: absolute;
+			  top: 310px;
+			  left: 10px;
+			  z-index: 10;
+			  background-color: rgba(255, 255, 255, 0.8);
+			  padding: 10px;
+			  border-radius: 5px;
+			  width: 250px;
+			}
+		  </style>
+		  
+		  <style>
+			#slider-container {
+			  position: absolute;
+			  top: 120px;
+			  left: 10px;
+			  z-index: 10;
+			  background-color: rgba(255, 255, 255, 0.8);
+			  padding: 10px;
+			  border-radius: 5px;
+			  width: 250px;
+			}
+		  </style>
+		  <style>
+			#combo-container {
+				position: absolute;
+				top: 20px;
+				right: 20px;
+				z-index: 10;
+				background-color: rgba(255, 255, 255, 0.9);
+				border: 1px solid #ccc;
+				border-radius: 8px;
+				padding: 15px;
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+				font-family: Arial, sans-serif;
+				max-width: 300px;
+				}
+
+				#combo-container label {
+				display: block;
+				margin-bottom: 10px;
+				font-size: 14px;
+				color: #333;
+				}
+
+				#mobilya-combo {
+				width: 100%;
+				padding: 10px;
+				font-size: 14px;
+				border: 1px solid #ccc;
+				border-radius: 5px;
+				box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+				background-color: #f9f9f9;
+				appearance: none;
+				outline: none;
+				cursor: pointer;
+				}
+
+				#mobilya-combo:focus {
+				border-color: #007bff;
+				box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+				}
+
+		  </style>
+		
+		<script type="module" src="/main.js"></script>
+		
+		  
+	</body>
+</html>

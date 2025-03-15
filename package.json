@@ -1,0 +1,19 @@
+{
+  "name": "3d_room",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite"
+  },
+  "type": "module",
+  "author": "yusuf",
+  "license": "ISC",
+  "dependencies": {
+    "three": "^0.171.0"
+  },
+  "devDependencies": {
+    "vite": "^6.0.3"
+  },
+  "description": ""
+}

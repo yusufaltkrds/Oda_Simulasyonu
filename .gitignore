@@ -1,0 +1,7 @@
+models/
+node_modules/
+background_2.exr
+room.glb
+*.glb
+*.gltf
+*.exr
